@@ -1,45 +1,82 @@
-const products = [
-  { name: "25 Diamond", price: "20 টাকা" },
-  { name: "50 Diamond", price: "39 টাকা" },
-  { name: "100 Diamond", price: "76 টাকা" },
-  { name: "115 Diamond", price: "80 টাকা" },
-  { name: "240 Diamond", price: "161 টাকা" },
-  { name: "355 Diamond", price: "245 টাকা" },
-  { name: "480 Diamond", price: "321 টাকা" },
-  { name: "505 Diamond", price: "340 টাকা" },
-  { name: "610 Diamond", price: "405 টাকা" },
-  { name: "725 Diamond", price: "480 টাকা" },
-  { name: "850 Diamond", price: "560 টাকা" },
-  { name: "1090 Diamond", price: "720 টাকা" },
-  { name: "1240 Diamond", price: "820 টাকা" },
-  { name: "2530 Diamond", price: "1600 টাকা" },
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
 
-  { name: "Weekly Lite", price: "43 টাকা" },
-  { name: "Weekly", price: "161 টাকা" },
-  { name: "2x Weekly", price: "321 টাকা" },
-  { name: "3x Weekly", price: "479 টাকা" },
-  { name: "4x Weekly", price: "640 টাকা" },
-  { name: "5x Weekly", price: "795 টাকা" },
-  { name: "Monthly", price: "849 টাকা" }
-];
+body{
+  background:#f5f5f5;
+  color:#333;
+}
 
-const container = document.getElementById("products");
+.header{
+  background:#ff5722;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+}
 
-products.forEach(item => {
-  container.innerHTML += `
-    <div class="product">
-      <h3>${item.name}</h3>
-      <h2>${item.price}</h2>
+.banner{
+  background:#222;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  font-size:20px;
+  font-weight:bold;
+}
 
-      <button onclick="window.open('https://wa.me/8801981571121?text=আমি%20${encodeURIComponent(item.name)}%20অর্ডার%20করতে%20চাই','_blank')">
-        WhatsApp Order
-      </button>
+.title{
+  text-align:center;
+  margin:20px 0;
+  color:#ff5722;
+}
 
-      <br><br>
+#products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+  padding:20px;
+}
 
-      <button onclick="window.open('https://t.me/joydebtopupbd','_blank')">
-        Telegram
-      </button>
-    </div>
-  `;
-});
+.product{
+  background:#fff;
+  border-radius:12px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+.product h3{
+  margin-bottom:10px;
+  font-size:22px;
+}
+
+.product h2{
+  color:#ff5722;
+  margin-bottom:15px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  cursor:pointer;
+  margin-top:8px;
+}
+
+button:first-of-type{
+  background:#25D366;
+  color:#fff;
+}
+
+button:last-of-type{
+  background:#0088cc;
+  color:#fff;
+}
+
+button:hover{
+  opacity:.9;
+}
