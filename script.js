@@ -10,9 +10,7 @@ async function loadProducts() {
   container.innerHTML = "";
 
   try {
-    const querySnapshot = await getDocs(
-      collection(db, "Admin", "Admin", "products")
-    );
+    const querySnapshot = await getDocs(collection(db, "Admin", "products"));
 
     querySnapshot.forEach((doc) => {
       const item = doc.data();
