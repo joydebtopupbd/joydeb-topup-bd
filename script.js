@@ -1,3 +1,5 @@
+import { db } from "./firebase.js";
+import { collection, getDocs } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 const products = [
   { name: "25 Diamond", price: "23 টাকা" },
   { name: "50 Diamond", price: "39 টাকা" },
