@@ -1,5 +1,6 @@
 const products = [
   { name: "25 Diamond", price: "23 টাকা" },
+  { name: "1000 Diamond", price: "650 টাকা" },
   { name: "50 Diamond", price: "39 টাকা" },
   { name: "100 Diamond", price: "76 টাকা" },
   { name: "115 Diamond", price: "80 টাকা" },
