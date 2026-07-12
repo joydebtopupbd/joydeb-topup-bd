@@ -13,64 +13,57 @@
 <style>
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
 }
-
 
 .header{
-    background:#ff5722;
-    color:white;
-    text-align:center;
-    padding:18px;
-    font-size:22px;
-    font-weight:bold;
+background:#ff5722;
+color:white;
+text-align:center;
+padding:20px;
 }
-
 
 .box{
-    width:90%;
-    max-width:420px;
-    margin:20px auto;
-    background:white;
-    padding:20px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+width:90%;
+max-width:420px;
+margin:20px auto;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 10px #ccc;
 }
-
 
 .info{
-    background:#fafafa;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:15px;
+background:#eee;
+padding:15px;
+border-radius:10px;
+margin-bottom:15px;
 }
-
 
 input{
-
-    width:100%;
-    padding:14px;
-    border:1px solid #ccc;
-    border-radius:10px;
-    font-size:16px;
-    box-sizing:border-box;
-
+width:100%;
+padding:14px;
+border:1px solid #ccc;
+border-radius:10px;
+font-size:16px;
+box-sizing:border-box;
 }
 
-
 button{
+width:100%;
+padding:15px;
+margin-top:15px;
+border:none;
+border-radius:10px;
+font-size:17px;
+background:#ff5722;
+color:white;
+}
 
-    width:100%;
-    padding:15px;
-    margin-top:15px;
-    background:#ff5722;
-    color:white;
-    border:none;
-    border-radius:10px;
-    font-size:17px;
-
+.back{
+background:#333;
 }
 
 </style>
@@ -82,8 +75,9 @@ button{
 
 
 <div class="header">
-🛒 Checkout
+<h2>🛒 Order Checkout</h2>
 </div>
+
 
 
 <div class="box">
@@ -95,8 +89,8 @@ button{
 Product Name
 </h3>
 
-<h2 id="price">
-৳0
+<h2>
+৳<span id="price">0</span>
 </h2>
 
 </div>
@@ -120,34 +114,41 @@ Confirm Order
 </button>
 
 
+<button class="back" onclick="history.back()">
+⬅ Back
+</button>
+
+
 
 </div>
+
 
 
 
 <script>
 
 
-let product = localStorage.getItem("product");
+let product = localStorage.getItem("product") || "Offer";
 
-let price = localStorage.getItem("price");
+let price = localStorage.getItem("price") || "0";
 
 
-document.getElementById("product").innerHTML = product || "No Product";
+document.getElementById("product").innerHTML = product;
 
-document.getElementById("price").innerHTML = "৳" + (price || "0");
+document.getElementById("price").innerHTML = price;
 
 
 
 function confirmOrder(){
 
 
-let uid = document.getElementById("uid").value;
+let uid=document.getElementById("uid").value;
+
 
 
 if(uid==""){
 
-alert("Please enter UID");
+alert("UID লিখুন");
 
 return;
 
@@ -165,16 +166,12 @@ Price: ৳${price}
 
 Free Fire UID: ${uid}
 
-Please Confirm My Order.`;
+Please Complete My Order.`;
 
 
 
 window.open(
-
-"https://wa.me/8801981571121?text="
-
-+ encodeURIComponent(message)
-
+"https://wa.me/8801981571121?text="+encodeURIComponent(message)
 );
 
 
