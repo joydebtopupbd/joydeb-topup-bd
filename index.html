@@ -12,13 +12,14 @@
 
 <link rel="manifest" href="manifest.json">
 
+
 <style>
 
 body{
 margin:0;
 font-family:Arial,sans-serif;
 background:#f5f5f5;
-padding-bottom:75px;
+padding-bottom:80px;
 }
 
 
@@ -33,8 +34,8 @@ padding:20px;
 .notice{
 background:#222;
 color:white;
-text-align:center;
 padding:12px;
+text-align:center;
 }
 
 
@@ -48,7 +49,8 @@ text-align:center;
 }
 
 
-.container{
+
+.grid{
 
 display:grid;
 grid-template-columns:repeat(2,1fr);
@@ -58,18 +60,18 @@ padding:15px;
 }
 
 
-.box{
+.card{
 
 background:white;
-padding:20px;
 border-radius:15px;
+padding:20px;
 text-align:center;
 box-shadow:0 4px 10px #ccc;
 
 }
 
 
-.box a{
+.card a{
 
 text-decoration:none;
 color:#333;
@@ -85,9 +87,8 @@ font-size:30px;
 }
 
 
-/* Bottom Menu */
 
-.bottom-menu{
+.bottom{
 
 position:fixed;
 bottom:0;
@@ -103,12 +104,12 @@ box-shadow:0 -3px 10px #ccc;
 }
 
 
-.bottom-menu a{
+.bottom a{
 
 text-decoration:none;
 color:#333;
-text-align:center;
 font-size:13px;
+text-align:center;
 
 }
 
@@ -145,24 +146,25 @@ font-size:13px;
 
 <p>Fast & Secure Top Up</p>
 
-<a href="offer.html" style="color:white;">
-View All Offers
+<a href="product.html" style="color:white;">
+View Offers
 </a>
 
 </div>
 
 
 
-<div class="container">
+
+<div class="grid">
 
 
-<div class="box">
+<div class="card">
 
 <a href="product.html">
 
 <div class="icon">💎</div>
 
-Diamond Top Up
+Diamond Topup
 
 </a>
 
@@ -170,13 +172,13 @@ Diamond Top Up
 
 
 
-<div class="box">
+<div class="card">
 
 <a href="product.html">
 
 <div class="icon">🎮</div>
 
-UID Top Up
+UID Topup
 
 </a>
 
@@ -184,7 +186,7 @@ UID Top Up
 
 
 
-<div class="box">
+<div class="card">
 
 <a href="product.html">
 
@@ -198,13 +200,55 @@ Membership
 
 
 
-<div class="box">
+<div class="card">
 
-<a href="wallet.html">
+<a href="add-money.html">
 
 <div class="icon">💰</div>
 
+Add Money
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<a href="wallet.html">
+
+<div class="icon">👛</div>
+
 Wallet
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<a href="orders.html">
+
+<div class="icon">📦</div>
+
+Orders
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<a href="profile.html">
+
+<div class="icon">👤</div>
+
+Profile
 
 </a>
 
@@ -215,7 +259,8 @@ Wallet
 
 
 
-<div class="bottom-menu">
+
+<div class="bottom">
 
 
 <a href="index.html">
