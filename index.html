@@ -1,43 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joydeb Topup Bd</title>
 
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="manifest.json">
+<title>Joydeb Topup BD</title>
 
-  <meta name="theme-color" content="#ff5722">
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+padding-bottom:70px;
+}
+
+
+.header{
+
+background:#ff5722;
+color:white;
+padding:18px;
+text-align:center;
+
+}
+
+
+.header h1{
+margin:0;
+}
+
+
+.notice{
+
+background:#222;
+color:white;
+padding:12px;
+text-align:center;
+
+}
+
+
+
+.banner{
+
+margin:15px;
+background:#ff5722;
+color:white;
+border-radius:15px;
+padding:25px;
+text-align:center;
+
+}
+
+
+
+.container{
+
+padding:15px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+
+}
+
+
+
+.card{
+
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+}
+
+
+.card a{
+
+text-decoration:none;
+color:#333;
+font-weight:bold;
+
+}
+
+
+
+.bottom{
+
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:65px;
+background:white;
+display:flex;
+justify-content:space-around;
+align-items:center;
+box-shadow:0 -2px 10px rgba(0,0,0,.15);
+
+}
+
+
+
+.bottom a{
+
+text-decoration:none;
+color:#333;
+font-size:14px;
+text-align:center;
+
+}
+
+
+.icon{
+
+font-size:25px;
+
+}
+
+
+</style>
+
 </head>
+
 
 <body>
 
-<header class="header">
-  <h1>Joydeb Topup Bd</h1>
-  <p>Free Fire Diamond Top Up</p>
-</header>
 
-<div class="banner">
-  <h2>🔥 Best Price In Bangladesh 🔥</h2>
+<div class="header">
+
+<h1>Joydeb Topup BD</h1>
+
+<p>Free Fire Diamond Top Up</p>
+
 </div>
 
-<h2 class="title">Diamond Packages</h2>
 
-<div id="products"></div>
+
+<div class="notice">
+
+🔥 Best Price In Bangladesh 🔥
+
+</div>
+
+
+
+<div class="banner">
+
+<h2>Special Offer</h2>
+
+<p>Fast & Secure Top Up</p>
+
+<a href="offer.html" style="color:white;">
+View Offers
+</a>
+
+</div>
+
+
+
+<div class="container">
+
+
+<div class="card">
+
+<a href="product.html">
+
+<div class="icon">💎</div>
+
+Diamond Topup
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<a href="product.html">
+
+<div class="icon">🎮</div>
+
+UID Topup
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<a href="product.html">
+
+<div class="icon">🎫</div>
+
+Membership
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<a href="wallet.html">
+
+<div class="icon">💰</div>
+
+Wallet
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<a href="notice.html">
+
+<div class="icon">📢</div>
+
+Notice
+
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<a href="contact.html">
+
+<div class="icon">💬</div>
+
+Support
+
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="bottom">
+
+
+<a href="index.html">
+
+<div class="icon">🏠</div>
+
+Home
+
+</a>
+
+
+
+<a href="orders.html">
+
+<div class="icon">📦</div>
+
+Orders
+
+</a>
+
+
+
+<a href="wallet.html">
+
+<div class="icon">💰</div>
+
+Wallet
+
+</a>
+
+
+
+<a href="profile.html">
+
+<div class="icon">👤</div>
+
+Profile
+
+</a>
+
+
+</div>
+
+
 
 <script src="script.js"></script>
 
-<!-- Service Worker -->
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('service-worker.js');
-  });
-}
-</script>
 
 </body>
-</html>
+
+  </html>
