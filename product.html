@@ -1,1 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Products - Joydeb Topup BD</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+
+.header{
+    background:#ff5722;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+
+.container{
+    width:92%;
+    margin:20px auto;
+}
+
+
+.card{
+
+    background:white;
+    border-radius:15px;
+    padding:18px;
+    margin-bottom:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    text-align:center;
+
+}
+
+
+.card h3{
+    color:#333;
+}
+
+
+.price{
+
+    color:#ff5722;
+    font-size:22px;
+    font-weight:bold;
+
+}
+
+
+button{
+
+    width:100%;
+    padding:13px;
+    margin-top:12px;
+    background:#ff5722;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+
+}
+
+
+.category{
+
+    background:#222;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    margin:15px 0;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+🎮 Free Fire Products
+</div>
+
+
+<div class="container">
+
+
+<div class="category">
+💎 Diamond Packages
+</div>
+
+
+<div class="card">
+
+<h3>25 Diamond</h3>
+
+<p class="price">
+৳23
+</p>
+
+<button onclick="order('25 Diamond','23')">
+Order Now
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>100 Diamond</h3>
+
+<p class="price">
+৳76
+</p>
+
+<button onclick="order('100 Diamond','76')">
+Order Now
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>2530 Diamond</h3>
+
+<p class="price">
+৳1599
+</p>
+
+<button onclick="order('2530 Diamond','1599')">
+Order Now
+</button>
+
+</div>
+
+
+
+<div class="category">
+🎫 Membership
+</div>
+
+
+
+<div class="card">
+
+<h3>Weekly Membership</h3>
+
+<p class="price">
+৳161
+</p>
+
+<button onclick="order('Weekly Membership','161')">
+Order Now
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Monthly Membership</h3>
+
+<p class="price">
+৳849
+</p>
+
+<button onclick="order('Monthly Membership','849')">
+Order Now
+</button>
+
+</div>
+
+
+
+</div>
+
+
+
+<script>
+
+function order(name,price){
+
+localStorage.setItem("product",name);
+
+localStorage.setItem("price",price);
+
+window.location.href="checkout.html";
+
+}
+
+</script>
+
+
+</body>
+</html>
