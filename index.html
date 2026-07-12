@@ -9,6 +9,7 @@
 <title>Joydeb Topup BD</title>
 
 <link rel="stylesheet" href="style.css">
+
 <link rel="manifest" href="manifest.json">
 
 <style>
@@ -17,72 +18,58 @@ body{
 margin:0;
 font-family:Arial,sans-serif;
 background:#f5f5f5;
-padding-bottom:70px;
+padding-bottom:75px;
 }
 
 
 .header{
-
 background:#ff5722;
 color:white;
-padding:18px;
 text-align:center;
-
-}
-
-
-.header h1{
-margin:0;
+padding:20px;
 }
 
 
 .notice{
-
 background:#222;
 color:white;
-padding:12px;
 text-align:center;
-
+padding:12px;
 }
 
 
-
-.banner{
-
+.offer{
 margin:15px;
 background:#ff5722;
 color:white;
-border-radius:15px;
 padding:25px;
+border-radius:15px;
 text-align:center;
-
 }
-
 
 
 .container{
 
-padding:15px;
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:15px;
+padding:15px;
 
 }
 
 
-
-.card{
+.box{
 
 background:white;
 padding:20px;
 border-radius:15px;
 text-align:center;
-box-shadow:0 4px 10px rgba(0,0,0,.15);
+box-shadow:0 4px 10px #ccc;
 
 }
 
 
-.card a{
+.box a{
 
 text-decoration:none;
 color:#333;
@@ -91,8 +78,16 @@ font-weight:bold;
 }
 
 
+.icon{
 
-.bottom{
+font-size:30px;
+
+}
+
+
+/* Bottom Menu */
+
+.bottom-menu{
 
 position:fixed;
 bottom:0;
@@ -103,25 +98,17 @@ background:white;
 display:flex;
 justify-content:space-around;
 align-items:center;
-box-shadow:0 -2px 10px rgba(0,0,0,.15);
+box-shadow:0 -3px 10px #ccc;
 
 }
 
 
-
-.bottom a{
+.bottom-menu a{
 
 text-decoration:none;
 color:#333;
-font-size:14px;
 text-align:center;
-
-}
-
-
-.icon{
-
-font-size:25px;
+font-size:13px;
 
 }
 
@@ -152,14 +139,14 @@ font-size:25px;
 
 
 
-<div class="banner">
+<div class="offer">
 
 <h2>Special Offer</h2>
 
 <p>Fast & Secure Top Up</p>
 
 <a href="offer.html" style="color:white;">
-View Offers
+View All Offers
 </a>
 
 </div>
@@ -169,13 +156,13 @@ View Offers
 <div class="container">
 
 
-<div class="card">
+<div class="box">
 
 <a href="product.html">
 
 <div class="icon">💎</div>
 
-Diamond Topup
+Diamond Top Up
 
 </a>
 
@@ -183,13 +170,13 @@ Diamond Topup
 
 
 
-<div class="card">
+<div class="box">
 
 <a href="product.html">
 
 <div class="icon">🎮</div>
 
-UID Topup
+UID Top Up
 
 </a>
 
@@ -197,7 +184,7 @@ UID Topup
 
 
 
-<div class="card">
+<div class="box">
 
 <a href="product.html">
 
@@ -211,7 +198,7 @@ Membership
 
 
 
-<div class="card">
+<div class="box">
 
 <a href="wallet.html">
 
@@ -224,75 +211,40 @@ Wallet
 </div>
 
 
-
-<div class="card">
-
-<a href="notice.html">
-
-<div class="icon">📢</div>
-
-Notice
-
-</a>
-
 </div>
 
 
 
-<div class="card">
-
-<a href="contact.html">
-
-<div class="icon">💬</div>
-
-Support
-
-</a>
-
-</div>
-
-
-</div>
-
-
-
-<div class="bottom">
+<div class="bottom-menu">
 
 
 <a href="index.html">
 
-<div class="icon">🏠</div>
-
+🏠<br>
 Home
 
 </a>
 
 
-
 <a href="orders.html">
 
-<div class="icon">📦</div>
-
+📦<br>
 Orders
 
 </a>
 
 
-
 <a href="wallet.html">
 
-<div class="icon">💰</div>
-
+💰<br>
 Wallet
 
 </a>
 
 
-
 <a href="profile.html">
 
-<div class="icon">👤</div>
-
+👤<br>
 Profile
 
 </a>
@@ -302,9 +254,6 @@ Profile
 
 
 
-<script src="script.js"></script>
-
-
 </body>
 
-  </html>
+</html>
