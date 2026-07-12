@@ -1,135 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Profile - Joydeb Topup BD</title>
 
 <link rel="stylesheet" href="style.css">
-<link rel="manifest" href="manifest.json">
 
 <style>
+
 body{
-    margin:0;
-    background:#f5f5f5;
-    font-family:Arial,sans-serif;
+margin:0;
+font-family:Arial;
+background:#f5f5f5;
+padding-bottom:80px;
 }
+
 
 .header{
-    background:#ff5722;
-    color:#fff;
-    padding:20px;
-    text-align:center;
+
+background:#ff5722;
+color:white;
+padding:20px;
+text-align:center;
+
 }
 
-.profile-card{
-    width:90%;
-    max-width:450px;
-    margin:20px auto;
-    background:#fff;
-    border-radius:15px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+.profile-box{
+
+width:90%;
+max-width:400px;
+margin:20px auto;
+background:white;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 4px 10px #ccc;
+
 }
+
 
 .profile-img{
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    border:3px solid #ff5722;
-    object-fit:cover;
+
+width:90px;
+height:90px;
+border-radius:50%;
+border:3px solid #ff5722;
+
 }
+
 
 .name{
-    font-size:22px;
-    margin-top:10px;
-    color:#333;
+
+font-size:22px;
+font-weight:bold;
+margin:10px;
+
 }
 
-.email{
-    color:#777;
-    margin-bottom:20px;
+
+.balance{
+
+background:#ff5722;
+color:white;
+padding:15px;
+border-radius:10px;
+font-size:25px;
+
 }
 
-.wallet{
-    background:#ff5722;
-    color:white;
-    border-radius:12px;
-    padding:15px;
-    margin-bottom:20px;
+
+button{
+
+width:100%;
+padding:14px;
+margin-top:12px;
+border:none;
+border-radius:10px;
+font-size:16px;
+
 }
 
-.wallet h2{
-    margin:0;
+
+.orange{
+
+background:#ff5722;
+color:white;
+
 }
 
-.menu{
-    display:flex;
-    flex-direction:column;
-    gap:12px;
+
+.dark{
+
+background:#333;
+color:white;
+
 }
 
-.menu a{
-    text-decoration:none;
-    background:white;
-    color:#333;
-    border-radius:10px;
-    padding:15px;
-    box-shadow:0 2px 6px rgba(0,0,0,.1);
-    font-weight:bold;
+
+
+.bottom-menu{
+
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:65px;
+background:white;
+display:flex;
+justify-content:space-around;
+align-items:center;
+box-shadow:0 -3px 10px #ccc;
+
 }
 
-.logout{
-    background:red!important;
-    color:white!important;
+
+.bottom-menu a{
+
+text-decoration:none;
+color:#333;
+text-align:center;
+font-size:13px;
+
 }
+
 </style>
 
 </head>
 
+
 <body>
 
+
 <div class="header">
-<h2>My Profile</h2>
+
+<h2>👤 My Profile</h2>
+
 </div>
 
-<div class="profile-card">
+
+
+<div class="profile-box">
+
 
 <img src="https://via.placeholder.com/90" class="profile-img">
 
-<div class="name">Guest User</div>
 
-<div class="email">guest@example.com</div>
-
-<div class="wallet">
-<p>Wallet Balance</p>
-<h2>৳ 0</h2>
+<div class="name">
+Guest User
 </div>
 
-<div class="menu">
 
-<a href="add-money.html">➕ Add Money</a>
+<p>
+guest@example.com
+</p>
 
-<a href="orders.html">📦 My Orders</a>
 
-<a href="wallet.html">💰 Wallet History</a>
 
-<a href="notice.html">📢 Notice</a>
+<div class="balance">
 
-<a href="offer.html">🎁 Offers</a>
-
-<a href="https://wa.me/8801981571121">💬 WhatsApp Support</a>
-
-<a href="https://t.me/joydebtopupbd">📱 Telegram Channel</a>
-
-<a href="login.html" class="logout">🚪 Logout</a>
+৳ 0
 
 </div>
 
+
+
+<button class="orange" onclick="location.href='add-money.html'">
+
+➕ Add Money
+
+</button>
+
+
+
+<button class="orange" onclick="location.href='orders.html'">
+
+📦 My Orders
+
+</button>
+
+
+
+<button class="dark" onclick="history.back()">
+
+⬅ Back
+
+</button>
+
+
+
+<button class="dark" onclick="location.href='login.html'">
+
+🚪 Logout
+
+</button>
+
+
+
 </div>
 
-<script src="profile.js"></script>
+
+
+
+<div class="bottom-menu">
+
+
+<a href="index.html">
+🏠<br>
+Home
+</a>
+
+
+<a href="orders.html">
+📦<br>
+Orders
+</a>
+
+
+<a href="wallet.html">
+💰<br>
+Wallet
+</a>
+
+
+<a href="profile.html">
+👤<br>
+Profile
+</a>
+
+
+</div>
+
+
 
 </body>
+
 </html>
