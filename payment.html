@@ -1,154 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Payment - Joydeb Topup BD</title>
 
 <link rel="stylesheet" href="style.css">
 
 <style>
+
 body{
 margin:0;
-font-family:Arial,sans-serif;
+font-family:Arial;
 background:#f5f5f5;
+padding-bottom:80px;
 }
+
 
 .header{
 background:#ff5722;
-color:#fff;
-padding:18px;
+color:white;
+padding:20px;
 text-align:center;
-font-size:22px;
-font-weight:bold;
 }
+
 
 .box{
+
 width:90%;
-max-width:420px;
+max-width:400px;
 margin:20px auto;
-background:#fff;
+background:white;
 padding:20px;
 border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
+box-shadow:0 4px 10px #ccc;
+
 }
 
-.method{
+
+.methods{
+
 display:flex;
 gap:10px;
-margin-bottom:20px;
+
 }
 
-.method button{
+
+.methods button{
+
 flex:1;
 padding:14px;
 border:none;
 border-radius:10px;
+color:white;
 font-size:16px;
-font-weight:bold;
-cursor:pointer;
+
 }
+
 
 .bkash{
+
 background:#e2136e;
-color:#fff;
+
 }
+
 
 .nagad{
+
 background:#f57c00;
-color:#fff;
+
 }
+
 
 .info{
-background:#fafafa;
+
+background:#eee;
 padding:15px;
 border-radius:10px;
-margin:15px 0;
+margin-top:15px;
+
 }
+
 
 input{
+
 width:100%;
 padding:14px;
-font-size:17px;
-border:1px solid #ccc;
+margin-top:15px;
 border-radius:10px;
+border:1px solid #ccc;
 box-sizing:border-box;
+font-size:16px;
+
 }
+
+
+button{
+
+padding:14px;
+border:none;
+border-radius:10px;
+font-size:16px;
+
+}
+
 
 .copy{
+
 width:100%;
+background:#2196f3;
+color:white;
 margin-top:10px;
-padding:12px;
-background:#2196F3;
-color:#fff;
-border:none;
-border-radius:10px;
+
 }
 
+
 .verify{
+
 width:100%;
+background:#4caf50;
+color:white;
 margin-top:15px;
-padding:15px;
-background:#4CAF50;
-color:#fff;
-border:none;
-border-radius:10px;
-font-size:18px;
+
 }
+
+
+.back{
+
+width:100%;
+background:#333;
+color:white;
+margin-top:15px;
+
+}
+
 </style>
 
 </head>
+
+
 <body>
 
+
 <div class="header">
-Payment
+
+<h2>💳 Payment</h2>
+
 </div>
+
+
 
 <div class="box">
 
-<div class="method">
-<button class="bkash" onclick="setMethod('bKash')">bKash</button>
-<button class="nagad" onclick="setMethod('Nagad')">Nagad</button>
-</div>
 
-<div class="info">
-<b>Amount:</b>
-<span id="amount">৳0</span>
-</div>
 
-<div class="info">
-<b>Send Money To:</b><br>
-<span id="number">01741218883</span>
-</div>
+<h3>Select Payment Method</h3>
 
-<button class="copy" onclick="copyNumber()">
-Copy Number
+
+<div class="methods">
+
+<button class="bkash" onclick="selectMethod('bKash')">
+
+bKash
+
 </button>
+
+
+<button class="nagad" onclick="selectMethod('Nagad')">
+
+Nagad
+
+</button>
+
+</div>
+
+
+
+<div class="info">
+
+Payment Method:
+<b id="method">bKash</b>
 
 <br><br>
 
-<input
-type="text"
-id="trx"
-placeholder="Enter Transaction ID">
+Amount:
+<b>৳<span id="amount">0</span></b>
 
-<button class="verify" onclick="verifyPayment()">
-VERIFY
-</button>
+<br><br>
+
+Number:
+<b id="number">01741218883</b>
 
 </div>
 
+
+
+<button class="copy" onclick="copyNumber()">
+
+📋 Copy Number
+
+</button>
+
+
+
+<input 
+type="text"
+id="trx"
+placeholder="Transaction ID দিন">
+
+
+
+<button class="verify" onclick="verifyPayment()">
+
+VERIFY
+
+</button>
+
+
+<button class="back" onclick="history.back()">
+
+⬅ Back
+
+</button>
+
+
+
+</div>
+
+
+
+
 <script>
 
-let paymentMethod="bKash";
 
-document.getElementById("amount").innerHTML="৳"+localStorage.getItem("amount");
+let method="bKash";
 
-function setMethod(method){
 
-paymentMethod=method;
+let amount=localStorage.getItem("amount") || 0;
+
+
+document.getElementById("amount").innerHTML=amount;
+
+
+
+function selectMethod(value){
+
+method=value;
+
+document.getElementById("method").innerHTML=value;
+
 
 }
+
+
 
 function copyNumber(){
 
@@ -158,36 +265,53 @@ alert("Number Copied");
 
 }
 
+
+
 function verifyPayment(){
 
-const amount=localStorage.getItem("amount");
 
-const trx=document.getElementById("trx").value;
+let trx=document.getElementById("trx").value;
+
+
 
 if(trx==""){
 
-alert("Please enter Transaction ID");
+alert("Transaction ID দিন");
 
 return;
 
 }
 
-const msg=
+
+
+let message=
+
 `Joydeb Topup BD
 
-Payment Method: ${paymentMethod}
+Payment Method: ${method}
 
 Amount: ৳${amount}
 
 Transaction ID: ${trx}
 
-Please add balance to my wallet.`;
+Please Verify My Payment.`;
 
-window.open("https://wa.me/8801981571121?text="+encodeURIComponent(msg));
+
+
+window.open(
+
+"https://wa.me/8801981571121?text="+encodeURIComponent(message)
+
+);
+
+
 
 }
 
+
 </script>
 
+
 </body>
+
 </html>
