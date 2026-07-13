@@ -186,3 +186,109 @@ input{
     color:green;
     font-weight:bold;
 }
+/* ===== Joydeb Topup New UI ===== */
+
+.top-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+background:#ff5722;
+color:#fff;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#fff;
+object-fit:cover;
+}
+
+.top-right{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.wallet-btn{
+background:#fff;
+color:#ff5722;
+padding:8px 12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.profile-btn{
+background:#fff;
+width:40px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+text-decoration:none;
+font-size:20px;
+}
+
+.banner{
+padding:15px;
+}
+
+.banner img{
+width:100%;
+border-radius:15px;
+display:block;
+}
+
+.offer-grid,
+.category-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+padding:15px;
+}
+
+.offer-grid a,
+.category-grid a{
+background:#fff;
+border-radius:15px;
+padding:15px;
+text-align:center;
+text-decoration:none;
+color:#333;
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,.12);
+}
+
+.offer-grid img{
+width:100%;
+border-radius:12px;
+margin-bottom:10px;
+}
+
+.bottom-nav{
+position:fixed;
+left:0;
+right:0;
+bottom:0;
+background:#fff;
+display:flex;
+justify-content:space-around;
+padding:10px 0;
+box-shadow:0 -3px 10px rgba(0,0,0,.15);
+}
+
+.bottom-nav a{
+text-decoration:none;
+color:#333;
+font-size:13px;
+text-align:center;
+}
