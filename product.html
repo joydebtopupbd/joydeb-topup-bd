@@ -1,86 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Products - Joydeb Topup BD</title>
+<title>Joydeb Topup BD - Products</title>
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f5f5f5;
+margin:0;
+background:#f5f5f5;
+font-family:Arial,sans-serif;
+padding-bottom:90px;
 }
-
 
 .header{
-    background:#ff5722;
-    color:white;
-    text-align:center;
-    padding:18px;
-    font-size:22px;
-    font-weight:bold;
+
+background:#ff5722;
+padding:15px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+color:#fff;
+
 }
 
+.back{
 
-.container{
-    width:92%;
-    margin:20px auto;
+color:#fff;
+text-decoration:none;
+font-size:22px;
+
 }
 
+.title{
+
+font-size:22px;
+font-weight:bold;
+
+}
+
+.banner{
+
+margin:15px;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,.15);
+
+}
+
+.banner img{
+
+width:100%;
+display:block;
+
+}
+
+.section{
+
+margin:15px;
+font-size:20px;
+font-weight:bold;
+color:#222;
+
+}
+
+.products{
+
+padding:15px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+
+}
 
 .card{
 
-    background:white;
-    border-radius:15px;
-    padding:18px;
-    margin-bottom:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,.15);
-    text-align:center;
+background:#fff;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 4px 10px rgba(0,0,0,.15);
 
 }
 
+.card img{
 
-.card h3{
-    color:#333;
+width:100%;
+height:140px;
+object-fit:cover;
+
 }
 
+.card-body{
+
+padding:15px;
+text-align:center;
+
+}
+
+.card-body h3{
+
+margin:5px 0;
+
+}
 
 .price{
 
-    color:#ff5722;
-    font-size:22px;
-    font-weight:bold;
+color:#ff5722;
+font-size:22px;
+font-weight:bold;
+margin:10px 0;
 
 }
 
+.buy{
 
-button{
-
-    width:100%;
-    padding:13px;
-    margin-top:12px;
-    background:#ff5722;
-    color:white;
-    border:none;
-    border-radius:10px;
-    font-size:16px;
-
-}
-
-
-.category{
-
-    background:#222;
-    color:white;
-    padding:12px;
-    border-radius:10px;
-    margin:15px 0;
+width:100%;
+padding:12px;
+border:none;
+background:#ff5722;
+color:#fff;
+border-radius:10px;
+font-size:16px;
 
 }
 
@@ -88,127 +134,254 @@ button{
 
 </head>
 
-
 <body>
 
-
 <div class="header">
-🎮 Free Fire Products
+
+<a href="index.html" class="back">←</a>
+
+<div class="title">
+Free Fire Topup
 </div>
 
+<div>🎮</div>
 
-<div class="container">
+</div>
 
+<div class="banner">
 
-<div class="category">
+<img id="bannerSlide" src="images/banner1.jpg">
+
+</div>
+
+<div class="section">
+
 💎 Diamond Packages
+
 </div>
 
+<div class="products">
+    <div class="card">
 
-<div class="card">
+<img src="https://picsum.photos/400/250?random=1" alt="Free Fire">
+
+<div class="card-body">
 
 <h3>25 Diamond</h3>
 
-<p class="price">
-৳23
-</p>
+<div class="price">৳23</div>
 
-<button onclick="order('25 Diamond','23')">
+<button class="buy" onclick="order('25 Diamond','23')">
 Order Now
 </button>
 
 </div>
 
+</div>
 
 
 <div class="card">
+
+<img src="https://picsum.photos/400/250?random=2" alt="Free Fire">
+
+<div class="card-body">
+
+<h3>50 Diamond</h3>
+
+<div class="price">৳39</div>
+
+<button class="buy" onclick="order('50 Diamond','39')">
+Order Now
+</button>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=3" alt="Free Fire">
+
+<div class="card-body">
 
 <h3>100 Diamond</h3>
 
-<p class="price">
-৳76
-</p>
+<div class="price">৳76</div>
 
-<button onclick="order('100 Diamond','76')">
+<button class="buy" onclick="order('100 Diamond','76')">
 Order Now
 </button>
 
 </div>
 
+</div>
 
 
 <div class="card">
 
-<h3>2530 Diamond</h3>
+<img src="https://picsum.photos/400/250?random=4" alt="Free Fire">
 
-<p class="price">
-৳1599
-</p>
+<div class="card-body">
 
-<button onclick="order('2530 Diamond','1599')">
+<h3>115 Diamond</h3>
+
+<div class="price">৳80</div>
+
+<button class="buy" onclick="order('115 Diamond','80')">
 Order Now
 </button>
 
 </div>
 
-
-
-<div class="category">
-🎫 Membership
 </div>
-
 
 
 <div class="card">
 
-<h3>Weekly Membership</h3>
+<img src="https://picsum.photos/400/250?random=5" alt="Free Fire">
 
-<p class="price">
-৳161
-</p>
+<div class="card-body">
 
-<button onclick="order('Weekly Membership','161')">
+<h3>240 Diamond</h3>
+
+<div class="price">৳161</div>
+
+<button class="buy" onclick="order('240 Diamond','161')">
 Order Now
 </button>
 
 </div>
 
+</div>
 
 
 <div class="card">
 
-<h3>Monthly Membership</h3>
+<img src="https://picsum.photos/400/250?random=6" alt="Free Fire">
 
-<p class="price">
-৳849
-</p>
+<div class="card-body">
 
-<button onclick="order('Monthly Membership','849')">
+<h3>355 Diamond</h3>
+
+<div class="price">৳248</div>
+
+<button class="buy" onclick="order('355 Diamond','248')">
 Order Now
 </button>
 
 </div>
 
+</div>
+<div class="card">
 
+<img src="https://picsum.photos/400/250?random=1" alt="Free Fire">
+
+<div class="card-body">
+
+<h3>25 Diamond</h3>
+
+<div class="price">৳23</div>
+
+<button class="buy" onclick="order('25 Diamond','23')">
+Order Now
+</button>
+
+</div>
 
 </div>
 
 
+<div class="card">
 
-<script>
+<img src="https://picsum.photos/400/250?random=2" alt="Free Fire">
 
-function order(name,price){
+<div class="card-body">
 
-localStorage.setItem("product",name);
+<h3>50 Diamond</h3>
 
-localStorage.setItem("price",price);
+<div class="price">৳39</div>
 
-window.location.href="checkout.html";
+<button class="buy" onclick="order('50 Diamond','39')">
+Order Now
+</button>
 
-}
+</div>
 
-</script>
+</div>
 
 
-</body>
-</html>
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=3" alt="Free Fire">
+
+<div class="card-body">
+
+<h3>100 Diamond</h3>
+
+<div class="price">৳76</div>
+
+<button class="buy" onclick="order('100 Diamond','76')">
+Order Now
+</button>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=4" alt="Free Fire">
+
+<div class="card-body">
+
+<h3>115 Diamond</h3>
+
+<div class="price">৳80</div>
+
+<button class="buy" onclick="order('115 Diamond','80')">
+Order Now
+</button>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=5" alt="Free Fire">
+
+<div class="card-body">
+
+<h3>240 Diamond</h3>
+
+<div class="price">৳161</div>
+
+<button class="buy" onclick="order('240 Diamond','161')">
+Order Now
+</button>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<img src="https://picsum.photos/400/250?random=6" alt="Free Fire">
+
+<div class="card-body">
+
+<h3>355 Diamond</h3>
+
+<div class="price">৳248</div>
+
+<button class="buy" onclick="order('355 Diamond','248')">
+Order Now
+</button>
+
+</div>
+
+</div>
